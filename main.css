@@ -1,0 +1,251 @@
+html {
+	font-family: 'Trebuchet MS', sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+body {
+	margin: 0;
+	font-size: 10pt;
+	color: #793636;
+}
+html,
+body {
+	height: 100%;
+}
+a {
+	color: #05C;
+	text-decoration: underline;
+}
+a:hover {
+	color: #793636;
+}
+.clear {clear: both;}
+
+.main {
+	margin: 20px auto;
+}
+
+div.qtip {
+	line-height: normal;
+}
+.qtip-titlebar{
+	font-size: 14px;
+	font-weight: bold;
+}
+.qtip-content{
+	font-size: 14px;
+}
+
+.header {
+	margin-bottom: 25px;
+}
+.header h1 {
+	padding: 0;
+	margin: 0;
+	font-size: 26pt;
+	text-align: center;
+	font-weight: bold;
+}
+.header .small {
+	font-size: 12pt;
+	text-align: center;
+}
+
+.seasons {
+	font-size: 14pt;
+}
+.seasons .season {
+	text-align: center;
+	float: left;
+	padding: 6px 0;
+}
+
+.episodes {
+	font-size: 8pt;
+}
+
+.characters {
+	padding-bottom: 50px;
+}
+.character-name {
+	font-size: 8pt;
+	position: absolute;
+	text-align: right;
+	width: 400px;
+	margin-left: -405px;
+	margin-top: -4px;
+}
+.character-name span {
+	cursor: pointer;
+}
+div.character-main {
+	font-weight: bold;
+	color: #610a0a;
+}
+
+.episodes .episode {
+	float: left;
+	overflow: hidden;
+	text-align: center;
+}
+div.episodes .last-episode {
+	border-right: 1px solid #e0a2a2;
+}
+
+.cell {
+	float: right;
+	height: 1px;
+	margin-top: 5px;
+}
+.cell:after {
+	content: '';
+	position: absolute;
+	/*border-bottom: 1px dotted #d6d6d6;*/
+	border-bottom: 1px solid #f1f1f1;
+	height: 4px;
+}
+div.appeared:after {
+	border: none;
+}
+
+div.appeared {
+	border-bottom: 7px solid #dc7878;
+}
+
+.death-dot {
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	background: #883f3f;
+	margin-top: 1px;
+	margin-left: 25px;
+	cursor: pointer;
+}
+.death-note {
+	position: relative;
+	z-index: 10;
+	padding: 8px;
+	margin: -8px;
+}
+
+@media (min-width: 0px) and (max-width: 499px) {
+	/* episode_width = 12 */
+	/* character_height = 12 */
+	.main {
+		width: 375px;
+		padding-left: 120px;
+		padding-right: 20px;
+	}
+	.header {
+		position: relative;
+		margin-left: -120px;
+	}
+	.header h1 {
+		font-size: 20pt;
+		padding: 0 10px;
+	}
+	.episodes {
+		font-size: 6pt;
+		overflow: hidden;
+	}
+	.row {
+		height: 12px; /* character_height */
+	}
+	.season-1 {
+		width: 132px; /* 11 * episode_width */
+	}
+	.season-2, .season-3 {
+		width: 120px; /* 10 * episode_width */
+	}
+
+	.episodes .episode, .cell, .cell:after {
+		width: 12px; /* episode_width */
+	}
+	div.episodes .last-episode {
+		width: 11px; /* episode_width - 1 */
+	}
+	div.appeared {
+		border-bottom: 5px solid #dc7878;
+	}
+	.death-dot {
+		width: 5px;
+		height: 5px;
+		margin-left: 7px; /* episode_width - death-dot-width */
+	}
+}
+@media (min-width: 500px) and (max-width: 1014px) {
+	/* episode_width = 14 */
+	/* character_height = 12 */
+	.main {
+		width: 434px;
+		padding-left: 120px;
+		padding-right: 30px;
+	}
+	.header {
+		position: relative;
+		margin-left: -120px;
+	}
+	.header h1 {
+		font-size: 20pt;
+		padding: 0 10px;
+	}
+	.row {
+		height: 12px; /* character_height */
+	}
+	.season-1 {
+		width: 154px; /* 11 * episode_width */
+	}
+	.season-2, .season-3 {
+		width: 140px; /* 10 * episode_width */
+	}
+
+	.episodes .episode, .cell, .cell:after {
+		width: 14px; /* episode_width */
+	}
+	div.episodes .last-episode {
+		width: 13px; /* episode_width - 1 */
+	}
+	div.appeared {
+		border-bottom: 5px solid #dc7878;
+	}
+	.death-dot {
+		width: 5px;
+		height: 5px;
+		margin-left: 9px; /* episode_width - death-dot-width */
+	}
+}
+@media (min-width: 1015px) {
+	/* episode_width = 25 */
+	/* character_height = 16 */
+	.main {
+		width: 775px;
+	}
+	.row {
+		height: 16px; /* character_height */
+	}
+	.character-name {
+		font-size: 10pt;
+	}
+	.season-1 {
+		width: 275px; /* 11 * episode_width */
+	}
+	.season-2, .season-3 {
+		width: 250px; /* 10 * episode_width */
+	}
+
+	.episodes .episode, .cell, .cell:after {
+		width: 25px; /* episode_width */
+	}
+	div.episodes .last-episode {
+		width: 24px; /* episode_width - 1 */
+	}
+
+	.death-dot {
+		margin-left: 18px; /* episode_width - death-dot-width */
+	}
+}
+@media (min-width: 1015px) and (max-width: 1120px) {
+	.main {
+		padding-left: 80px;
+	}
+}
