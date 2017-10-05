@@ -2637,7 +2637,7 @@ RAM.characters = [
         "appearance": [
             "s2e9"
         ],
-        "died": "",
+        "died": "s2e9",
         "death_note": ""
     },
     {
