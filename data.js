@@ -3734,7 +3734,7 @@ RAM.characters = [
         "death_note": ""
     },
     {
-        "name": "Slow Rick",
+        "name": "Slow Rick (Tall Morty)",
         "image": "",
         "description": "",
         "appearance": [
